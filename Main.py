@@ -42,6 +42,7 @@ btn_devmgmt = ttk.Button(frame_tools1,
 text='Device Manager',
 iamge=img2,
 compound='left',
+command = lambda : os.system('devmgmt.msc'),
 style='my.TButton')
 
 #system Propertise
@@ -49,6 +50,7 @@ btn_syspro = ttk.Button(frame_tools1,
 text='System Propertise',
 iamge=img3,
 compound='left',
+command = lambda : os.system('sysdm.cpl'),
 style='my.TButton')
 
 #Network Setup
@@ -56,6 +58,7 @@ btn_network = ttk.Button(frame_tools1,
 text='Network Setup',
 iamge=img4,
 compound='left',
+command = lambda : os.system('ncpa.cpl'),
 style='my.TButton')
 
 #Add or Remove
@@ -63,6 +66,7 @@ btn_addrm = ttk.Button(frame_tools1,
 text='Add or Remove',
 iamge=img5,
 compound='left',
+command = lambda : os.system('appwiz.cpl'),
 style='my.TButton')
 
 #Mouse Setting
@@ -70,16 +74,68 @@ btn_mouse = ttk.Button(frame_tools1,
 text='Mouse Setting',
 iamge=img6,
 compound='left',
+command = lambda : os.system('main.cpl'),
 style='my.TButton')
 
 btn_devmgmt.pack(pady=(0,5))
 btn_syspro.pack(pady=(0,5))
-btn_devmgmt.pack(pady=(0,5))
-btn_devmgmt.pack(pady=(0,5))
-btn_devmgmt.pack(pady=(0,5))
+btn_network.pack(pady=(0,5))
+btn_addrm.pack(pady=(0,5))
+btn_mouse.pack(pady=(0,5))
 frame_tools1.pack(side='left')
 
 
+
+# Second Phase
+
+frame_tools2 = frame(win,bg='white',bd=2)
+
+#Task Manger
+btn_taskmgr = ttk.Button(frame_tools2,
+text='Task Manger',
+iamge=img7,
+compound='left',
+command = lambda : os.system('taskmgr'),
+style='my.TButton')
+
+#Group Policy Editor
+btn_group = ttk.Button(frame_tools2,
+text='Group Policy Editor',
+iamge=img8,
+compound='left',
+command = lambda : os.system('gpedit.msc'),
+style='my.TButton')
+
+#Services
+btn_services = ttk.Button(frame_tools2,
+text='Services',
+iamge=img9,
+compound='left',
+command = lambda : os.system('services.msc'),
+style='my.TButton')
+
+#Control Pannel
+btn_panel = ttk.Button(frame_tools2,
+text='Control Pannel',
+iamge=img10,
+compound='left',
+command = lambda : os.system('control'),
+style='my.TButton')
+
+#Registry
+btn_registry = ttk.Button(frame_tools2,
+text='Registry Editor',
+iamge=img11,
+compound='left',
+command = lambda : os.system('regedit'),
+style='my.TButton')
+
+btn_taskmgr.pack(pady=(0,5))
+btn_group.pack(pady=(0,5))
+btn_services.pack(pady=(0,5))
+btn_panel.pack(pady=(0,5))
+btn_registry.pack(pady=(0,5))
+frame_tools2.pack(side='right')
 
 
 mainloop()
